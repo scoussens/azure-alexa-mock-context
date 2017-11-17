@@ -1,6 +1,6 @@
 {
     "name": "azure-alexa-mock-context",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Provides a mock AWS Lambda context for use with the alexa-sdk in an Azure Function (or firebase function)",
     "main": "dist/index.js",
     "scripts": {
