@@ -1,6 +1,5 @@
 import { HttpContext } from './azure.model';
-export = AwsContext;
-declare class AwsContext {
+export declare class Context {
     id: string;
     stream: string;
     start: number;

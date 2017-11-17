@@ -1,7 +1,8 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const uuid = require("uuid");
 const moment = require("moment");
-class AwsContext {
+class Context {
     constructor(functionName, azureContext, id, stream) {
         this.getRemainingTimeInMillis = () => {
             const endTime = this.end || Date.now();
@@ -53,4 +54,4 @@ class AwsContext {
         this.logStreamName = `${moment().format('YYYY/MM/DD')}/[${this.functionVersion}]/${this.stream}`;
     }
 }
-module.exports = AwsContext;
+exports.Context = Context;

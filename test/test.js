@@ -1,7 +1,7 @@
 'use strict';
 
 var expect = require('chai').expect;
-var AwsContext = require('../dist/index');
+var AwsContext = require('../dist/index').Context;
 
 describe('get a context', () => {
     it('should give a context', () => {

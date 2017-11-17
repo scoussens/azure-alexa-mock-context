@@ -2,9 +2,7 @@ import { HttpContext } from './azure.model';
 import * as uuid from 'uuid';
 import * as moment from 'moment';
 
-export = AwsContext;
-
-class AwsContext {
+export class Context {
     // base
     id: string;
     stream: string;
@@ -39,12 +37,12 @@ class AwsContext {
         this.azureContext = azureContext;
 
         this.region = 'us-west-1';
-		this.account = '123456789012';
-		this.functionName = functionName;
-		this.functionVersion = '$LATEST';
-		this.memoryLimitInMB = '128';
+        this.account = '123456789012';
+        this.functionName = functionName;
+        this.functionVersion = '$LATEST';
+        this.memoryLimitInMB = '128';
         this.timeout = 3;
-        
+
         this.callbackWaitsForEmptyEventLoop = true;
         this.invokedFunctionArn = `arn:aws:lambda:${this.region}:${this.account}:function:${this.functionName}:${this.alias || this.functionVersion}`;
         this.awsRequestId = this.id;
@@ -94,3 +92,4 @@ class AwsContext {
         return;
     }
 }
+
